@@ -12,6 +12,7 @@ int main()
     void *publisher = zmq_socket(context, ZMQ_PUB);
     zmq_connect(publisher, "tcp://localhost:5555");
 
+
     // socket for uplink messages
     void *subscriber = zmq_socket(context, ZMQ_SUB);
     zmq_connect(subscriber, "tcp://localhost:5556");
